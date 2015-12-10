@@ -8,9 +8,5 @@ function corr = circpearson(x, y)
 	if denom == 0
 		return;
 	endif
-	for d = 1:l
-		num = sum( (x .- meanx) * (y .- meany)');
-		corr(d) = num/denom;
-		y = [y(2:l) y(1)];
-	endfor
+	corr = circorr(x.-meanx, y.-meany) ./ denom;
 endfunction
