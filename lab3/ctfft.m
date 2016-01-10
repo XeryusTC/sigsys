@@ -5,8 +5,8 @@ function y = ctfft(a, w)
 		return
 	end
 
-	yo = ctfft(a(1:2:length(a)), w^2);
-	ye = ctfft(a(2:2:length(a)), w^2);
+	yo = ctfft(a(2:2:length(a)), w^2);
+	ye = ctfft(a(1:2:length(a)), w^2);
 
 	y = zeros(1,n);
 
